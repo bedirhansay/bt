@@ -1,142 +1,244 @@
 export default function Home() {
-  const verses = [
-    {
-      topic: 'Umut',
-      surah: 'Zümer',
-      ayah: '39:53',
-      text: "De ki: Ey nefislerine karşı haddi aşan kullarım! Allah'ın rahmetinden ümit kesmeyin. Şüphesiz Allah bütün günahları bağışlar. Çünkü O, çok bağışlayandır, çok merhamet edendir.",
-    },
-    {
-      topic: 'Gönül Darlığı',
-      surah: 'İnşirah',
-      ayah: '94:5-6',
-      text: 'Demek ki, gerçekten zorlukla beraber bir kolaylık vardır. Evet, zorlukla beraber bir kolaylık vardır.',
-    },
-    {
-      topic: 'Umut',
-      surah: 'Bakara',
-      ayah: '2:286',
-      text: 'Allah hiçbir kimseye gücünün yettiğinden fazlasını yüklemez. Herkesin kazandığı iyilik kendi yararına, yaptığı kötülük de kendi zararınadır.',
-    },
-    {
-      topic: 'Gönül Darlığı',
-      surah: 'En’am',
-      ayah: '6:125',
-      text: "Allah kimi hidayete erdirmek isterse, onun göğsünü İslam'a açar. Kimi de saptırmak isterse, onun göğsünü daraltır, sıkıştırır; sanki göğe yükseliyormuş gibi.",
-    },
-    {
-      topic: 'Umut',
-      surah: 'Hicr',
-      ayah: '15:56',
-      text: 'O da dedi ki: Rabbimin rahmetinden, sapıklara düşmüş kimselerden başkası ümit kesmez.',
-    },
-    {
-      topic: 'Gönül Darlığı',
-      surah: 'Taha',
-      ayah: '20:25-26',
-      text: 'Musa dedi ki: Rabbim! Gönlümü aç, işimi kolaylaştır.',
-    },
-    {
-      topic: 'Umut',
-      surah: 'Talak',
-      ayah: '65:2-3',
-      text: "Kim Allah'a karşı gelmekten sakınırsa, Allah ona bir çıkış yolu açar ve onu hiç ummadığı yerden rızıklandırır.",
-    },
-    {
-      topic: 'Gönül Darlığı',
-      surah: 'Bakara',
-      ayah: '2:155-156',
-      text: 'Andolsun, sizi biraz korku, açlık, mallardan, canlardan ve ürünlerden eksiltme ile sınayacağız. Sabredenleri müjdele.',
-    },
-    {
-      topic: 'Umut',
-      surah: 'Yusuf',
-      ayah: '12:87',
-      text: "Allah'ın rahmetinden ümit kesmeyin. Çünkü kâfirler topluluğundan başkası Allah’ın rahmetinden ümit kesmez.",
-    },
-    {
-      topic: 'Gönül Darlığı',
-      surah: 'Şura',
-      ayah: '42:30',
-      text: 'Başınıza gelen herhangi bir musibet, kendi ellerinizin kazandığı şeyler yüzündendir. Bununla beraber Allah çoğunu affeder.',
-    },
-    {
-      topic: 'Umut',
-      surah: 'Hud',
-      ayah: '11:9',
-      text: 'Eğer biz insana rahmetimizi tattırır da sonra onu elinden alırsak, hiç şüphesiz o ümitsiz ve nankör olur.',
-    },
-    {
-      topic: 'Gönül Darlığı',
-      surah: 'Bakara',
-      ayah: '2:45',
-      text: "Sabır ve namazla Allah'tan yardım dileyin. Bu, ancak huşu sahipleri için kolaydır.",
-    },
-    {
-      topic: 'Umut',
-      surah: 'Kehf',
-      ayah: '18:10',
-      text: 'Gençler mağaraya sığındıklarında şöyle dediler: Ey Rabbimiz! Bize tarafından bir rahmet ver ve bize şu işimizde başarı ve kurtuluş nasip et.',
-    },
-    {
-      topic: 'Gönül Darlığı',
-      surah: 'Nahl',
-      ayah: '16:97',
-      text: 'Kim iyi bir iş yaparsa, erkek olsun kadın olsun, ona hoş bir hayat yaşatırız ve mükafatlarını yaptıklarının en güzeliyle veririz.',
-    },
-    {
-      topic: 'Umut',
-      surah: 'Rum',
-      ayah: '30:60',
-      text: 'O halde sabret. Şüphesiz Allah’ın vaadi haktır. Sakın iman etmeyenler seni gevşekliğe düşürmesin.',
-    },
-    {
-      topic: 'Gönül Darlığı',
-      surah: 'Hud',
-      ayah: '11:10',
-      text: 'Eğer insana bir nimet tattırır, sonra da onu çekip alırsak, hiç şüphesiz o, ümitsizliğe düşer ve nankör olur.',
-    },
-    {
-      topic: 'Umut',
-      surah: 'Zuhruf',
-      ayah: '43:13',
-      text: 'Şüphesiz, Rabbiniz gerçekten çok bağışlayıcıdır ve çok merhamet edicidir.',
-    },
-    {
-      topic: 'Gönül Darlığı',
-      surah: 'Tevbe',
-      ayah: '9:51',
-      text: 'De ki: Bizim başımıza, Allah’ın bizim için yazdığından başkası gelmez. O, bizim sahibimizdir. Müminler yalnız Allah’a tevekkül etsinler.',
-    },
-    {
-      topic: 'Umut',
-      surah: 'Nur',
-      ayah: '24:26',
-      text: 'Güzel sözler ve güzel işler, güzel insanlar içindir. Güzel insanlar da güzel işler içindir.',
-    },
-    {
-      topic: 'Gönül Darlığı',
-      surah: 'Bakara',
-      ayah: '2:216',
-      text: 'Sizin hoşlanmadığınız bir şey, sizin için hayırlı olabilir; sizin sevdiğiniz bir şey de sizin için kötü olabilir. Allah bilir, siz bilmezsiniz.',
-    },
-  ];
-
   return (
-    <div className="p-8">
-      <h2 className="text-6xl text-center">Unutma</h2>
-      <div>
-        {verses.map((verse, index) => (
-          <div key={index} style={{ marginBottom: '20px' }}>
-            <h2>{verse.topic}</h2>
-            <p>
-              <strong>Sure:</strong> {verse.surah} <br />
-              <strong>Ayet:</strong> {verse.ayah}
-            </p>
-            <blockquote>{verse.text}</blockquote>
-          </div>
-        ))}
+    <div>
+      <div className="loader">
+        <div className="loader-icon-1">&#10052;</div>
+        <div className="loader-text"></div>
       </div>
+      <div className="main">
+        <div className="initial-snow w-full">
+          <div className="mx-auto my-8 p-6 w-full rounded-lg shadow-lg text-center text-lg italic text-gray-700 max-w-lg leading-relaxed">
+            <br /> When a person does their very best, no matter the outcome, their conscience finds peace.
+          </div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+          <div className="snow">&#10052;</div>
+        </div>
+      </div>
+
+      <div className="snowMan">
+        <div className="innerSnow">
+          <div className="snowBall"></div>
+          <div className="snowBall"></div>
+          <div className="snowBall"></div>
+        </div>
+      </div>
+      <div className="snowMan noBlur">
+        <div className="innerSnow">
+          <div className="snowBall"></div>
+          <div className="snowBall"></div>
+          <div className="snowBall"></div>
+        </div>
+      </div>
+      <div className="snowFace">
+        <div className="eye"></div>
+        <div className="eye"></div>
+        <div className="nose"></div>
+        <div className="twigWrapper">
+          <div className="twig shade"></div>
+          <div className="twig"></div>
+          <div className="twigi"></div>
+        </div>
+      </div>
+      <div className="snowFall">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div className="snowFall delayMe">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div className="snowFall biggerSnow">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div className="snowFall delayMe biggerSnow">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <section className="sleigh">
+        <div className="santa">🦌</div>
+        <div className="santa1">🦌</div>
+        <div className="santa2">🦌</div>
+        <div className="santa3">🦌</div>
+        <div className="santa4">🦌</div>
+        <div className="santa5">
+          <i className="fa-solid fa-sleigh"></i>
+        </div>
+      </section>
+      <section className="snow">
+        <div className="snowflake">
+          <i className="fa-regular fa-snowflake"></i>
+        </div>
+        <div className="snowflake1">
+          <i className="fa-regular fa-snowflake"></i>
+        </div>
+        <div className="snowflake2">
+          <i className="fa-regular fa-snowflake"></i>
+        </div>
+        <div className="snowflake3">
+          <i className="fa-regular fa-snowflake"></i>
+        </div>
+        <div className="snowflake4">
+          <i className="fa-regular fa-snowflake"></i>
+        </div>
+        <div className="snowflake5">
+          <i className="fa-regular fa-snowflake"></i>
+        </div>
+        <div className="snowflake6">
+          <i className="fa-regular fa-snowflake"></i>
+        </div>
+        <div className="snowflake7">
+          <i className="fa-regular fa-snowflake"></i>
+        </div>
+        <div className="snowflake8">
+          <i className="fa-regular fa-snowflake"></i>
+        </div>
+        <div className="snowflake9">
+          <i className="fa-regular fa-snowflake"></i>
+        </div>
+        <div className="snowflake10">
+          <i className="fa-solid fa-snowflake"></i>
+        </div>
+        <div className="snowflake11">
+          <i className="fa-solid fa-snowflake"></i>
+        </div>
+        <div className="snowflake12">
+          <i className="fa-regular fa-snowflake"></i>
+        </div>
+        <div className="snowflake13">
+          <i className="fa-regular fa-snowflake"></i>
+        </div>
+        <div className="snowflake14">
+          <i className="fa-regular fa-snowflake"></i>
+        </div>
+      </section>
+      <section className="mountains">
+        <div className="mt1">
+          <div className="mtsnow1"></div>
+          <div className="snow-peak-1a"></div>
+          <div className="snow-peak-1b"></div>
+        </div>
+        <div className="mt2">
+          <div className="snow2"></div>
+          <div className="snow-peak-2a"></div>
+          <div className="snow-peak-2b"></div>
+          <div className="snow-peak-2c"></div>
+        </div>
+        <div className="mt3">
+          <div className="snow3"></div>
+          <div className="snow-peak-3a"></div>
+          <div className="snow-peak-3b"></div>
+          <div className="snow-peak-3c"></div>
+          <div className="snow-peak-3d"></div>
+        </div>
+        <div className="mt4">
+          <div className="snow4"></div>
+          <div className="snow-peak-4a"></div>
+          <div className="snow-peak-4b"></div>
+        </div>
+        <div className="mt5">
+          <div className="snow5"></div>
+          <div className="snow-peak-5a"></div>
+          <div className="snow-peak-5b"></div>
+          <div className="snow-peak-5c"></div>
+        </div>
+        <div className="mt6">
+          <div className="snow6"></div>
+          <div className="snow-peak-6a"></div>
+          <div className="snow-peak-6b"></div>
+          <div className="snow-peak-6c"></div>
+          <div className="snow-peak-6d"></div>
+        </div>
+      </section>
     </div>
   );
 }
