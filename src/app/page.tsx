@@ -241,23 +241,7 @@ export default function Home() {
     //   </section>
     // </div>
     <div className="bg-black text-white p-8 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold text-yellow-400 uppercase mb-4">Hayat Kuralı No:12</h2>
-      <strong className="block text-lg text-orange-500 mb-4">Seneca’nın 25. Mektubu</strong>
-      <p className="text-base leading-relaxed text-gray-300">
-        “Fakat hiçbir şey insanın dikkat çekmeyecek şekilde davranması ve başkalarıyla pek az, kendisiyle ise bol bol
-        konuşması kadar fayda sağlamaz.
-        <br />
-        Sohbetin baştan çıkarıcı bir yanı vardır, gizlice sokulup yanaşır ve sarhoşluk sırrı açığa çıkarır. Hiç kimse,
-        duyduğu şeyi, kendine saklayamaz. Meselenin saklanamayacak biri, meselenin sır olan bir şey olduğu bilgisiyle
-        herkesi rahatsız eder. Gevezeliğine nihayetinde gem vursa bile, her durumda güvenilirlikten uzak biri olarak
-        görülmeye mahkumdur.”
-      </p>
-
-      <strong className="block mt-10 text-orange-400 py-4 border-t border-gray-600">
-        -------- Aklı Başında olan kişi mutluluğun değil acı vermeyenin peşindedir.
-      </strong>
-
-      <strong className="block text-sm text-gray-500 italic mt-6">Günaydın Ballisi</strong>
+      3.4.97
     </div>
   );
 }
