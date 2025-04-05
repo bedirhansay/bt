@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Betul',
+  title: 'Serap',
   description: 'Best ever had ',
 };
 
